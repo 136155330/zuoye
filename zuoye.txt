@@ -1,0 +1,29 @@
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.Date;
+public class hhhhhhhh {
+	String login, message;
+	static String dizhi(String temp) {
+		String a =  "C:\\Users\\user\\Desktop\\" + temp + ".log";
+		return a;
+	}
+	static void xie(String a, String b) throws IOException {
+		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+		Date t = new Date();
+		String ans = format.format(t);
+		String f = dizhi(ans);
+		SimpleDateFormat aaaaa = new SimpleDateFormat("HH:MM:SS");
+		String be = aaaaa.format(new Date());
+		String xieru = be + " " + "name: " + a + " " + "mima: " + b;
+		BufferedWriter bf = new BufferedWriter(new FileWriter(f, true));
+		bf.write(xieru);
+		bf.newLine();
+		bf.close();
+	}
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		xie("hzb", "1222223456");
+	}
+
+}
